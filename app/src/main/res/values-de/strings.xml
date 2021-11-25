@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cost_of_service">Kosten</string>
+    <string name="how_was_the_service">Wie war der Service?</string>
+    <string name="service_amazing">Perfekt</string>
+    <string name="service_good">Gut</string>
+    <string name="service_ok">Mäßig</string>
+</resources>
