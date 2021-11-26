@@ -9,7 +9,7 @@ import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val tipPercentage = when(binding.tipOptions.checkedRadioButtonId) {
+        val tipPercentage = when (binding.tipOptions.checkedRadioButtonId) {
             R.id.option_twenty_percent -> 0.2
             R.id.option_eighteen_percent -> 0.18
             else -> 0.15
@@ -37,8 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         var tip = tipPercentage * cost
 
-        val isRoundUp = binding.roundUpSwitch.isChecked
-        if (isRoundUp) {
+        if (binding.roundUpSwitch.isChecked) {
             tip = kotlin.math.ceil(tip)
         }
 
