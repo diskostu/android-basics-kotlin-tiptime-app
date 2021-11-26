@@ -5,4 +5,7 @@
     <string name="service_amazing">Perfekt</string>
     <string name="service_good">Gut</string>
     <string name="service_ok">Mäßig</string>
+    <string name="button_calculate">Berechnen</string>
+    <string name="round_up_the_tip">Aufrunden?</string>
+    <string name="tip_amount">Trinkgeld: %s</string>
 </resources>
