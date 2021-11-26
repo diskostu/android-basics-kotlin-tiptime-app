@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
     private fun calculateTip() {
         val stringInTextField = binding.costOfService.text.toString()
         val cost = stringInTextField.toDoubleOrNull() ?: run {
-            binding.tipResult.text = ""
-            Toast.makeText(this, "Enter a valid value", Toast.LENGTH_LONG).show()
+            displayTip(0.0)
             return
         }
 
@@ -41,8 +40,12 @@ class MainActivity : AppCompatActivity() {
             tip = kotlin.math.ceil(tip)
         }
 
-        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        displayTip(tip)
+    }
 
+
+    private fun displayTip(tip: Double) {
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
         binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
 }
