@@ -8,4 +8,5 @@
     <string name="button_calculate">Berechnen</string>
     <string name="round_up_the_tip">Aufrunden?</string>
     <string name="tip_amount">Trinkgeld: %s</string>
+    <string name="final_sum">Endsumme: %s</string>
 </resources>
